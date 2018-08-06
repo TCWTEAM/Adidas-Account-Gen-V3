@@ -11,6 +11,7 @@ def gen(threadnum, catchall, useproxies, num):
     print('[Thread {}] Starting Thread...'.format(threadnum))
     for i in range(int(num)):
         if useproxies == True:
+            proxy = random.choice(proxyarr)
             try:
                 proxytest = proxy.split(":")[2]
                 userpass = True
